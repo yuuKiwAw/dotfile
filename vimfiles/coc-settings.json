@@ -1,0 +1,10 @@
+{
+	"languageserver": {
+		"coc-clangd": {
+			"command": "clangd",
+			"rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+			"filetypes": ["c", "cpp", "cc", "cxx", "c++", "objc", "objcpp"]
+		}
+  },
+  "snippets.ultisnips.pythonPrompt": false
+}
