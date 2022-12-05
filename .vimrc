@@ -8,7 +8,6 @@ set nu 				    			" 显示行号
 set showcmd						" 显示输出命令
 set background=dark					" 背景
 set scrolloff=5						" 保留行数
-" set cursorline					" 突出当前行
 set laststatus=2      					" 显示状态栏
 set autoindent						" 自动缩进
 set smartindent						" C智能缩进
@@ -16,26 +15,36 @@ set backspace=2						" 允许backspace和光标键跨行边界
 set showmatch						" 高亮显示匹配的括号
 set nobackup						" 禁止生成临时文件
 set mouse=a 						" 启用鼠标
-set updatetime=100
-set t_Co=256
 let mapleader=" "
+set termguicolors
+set updatetime=100
+
 
 call plug#begin()
 
-Plug 'arcticicestudio/nord-vim'
+Plug 'crusoexia/vim-monokai'
 
 Plug 'neoclide/coc.nvim'
+
 Plug 'airblade/vim-gitgutter'
 
 Plug 'junegunn/fzf'
+
+Plug 'mhinz/vim-startify'
  
 call plug#end()
 
+
 "===Theme==="
-colorscheme nord
+colorscheme monokai
 
 "===FZF==="
 map <Space>ff :FZF<CR>
+
+"===GitGutter==="
+" let g:gitgutter_highlight_lines = 1
+
+
 
 "===Coc.nvim Config==="
 let g:coc_global_extensions = [
@@ -107,3 +116,6 @@ augroup end
 
 "===Coc.nvim Config==="
 
+let g:startify_custom_header = [
+	\ 'Hello Yuki!'
+	\]
